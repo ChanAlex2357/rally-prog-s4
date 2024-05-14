@@ -9,11 +9,21 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    categorypilote.cpp \
+    chrono.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    pilote.cpp \
+    rally.cpp \
+    specials.cpp
 
 HEADERS += \
-    mainwindow.h
+    categorypilote.h \
+    chrono.h \
+    mainwindow.h \
+    pilote.h \
+    rally.h \
+    specials.h
 
 FORMS += \
     mainwindow.ui

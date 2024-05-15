@@ -1,6 +1,7 @@
 #ifndef SPECIALS_H
 #define SPECIALS_H
 
+#include <vector>
 class Specials {
 private:
     int id_special;
@@ -9,6 +10,7 @@ private:
 
 public:
     // Constructeur
+    Specials();
     Specials(int id_special, int id_rally, float distance);
 
     // Accesseurs (getters)
@@ -20,6 +22,13 @@ public:
     void setIdSpecial(int newIdSpecial);
     void setIdRally(int newIdRally);
     void setDistance(double newDistance);
+
+    //CRUD
+    void save();
+    static std::vector<Specials> getAll();
+    static Specials getById(int id);
+    void remove();
+    void update();
 };
 
 #endif // SPECIALS_H

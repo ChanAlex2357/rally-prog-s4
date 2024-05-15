@@ -12,3 +12,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+void MainWindow::on_rally_submit_button_clicked()
+{
+    // Recuperer le nom du rally
+}
+

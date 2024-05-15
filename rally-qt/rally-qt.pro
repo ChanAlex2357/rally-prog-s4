@@ -15,6 +15,7 @@ SOURCES += \
     mainwindow.cpp \
     pilote.cpp \
     rally.cpp \
+    rally_fomulaire.cpp \
     specials.cpp
 
 HEADERS += \
@@ -23,10 +24,12 @@ HEADERS += \
     mainwindow.h \
     pilote.h \
     rally.h \
+    rally_fomulaire.h \
     specials.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    rally_fomulaire.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

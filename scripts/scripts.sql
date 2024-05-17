@@ -43,6 +43,7 @@ Create TABLE Point (
     FOREIGN KEY(id_type_point) REFERENCES TypePoint(id_type_point)
 );
 
+
 -- View pour les pilotes et leur category
 Create or replace view v_pilote_category as
 select pilote.* , CategoryPilote.nom_category
@@ -57,14 +58,6 @@ select point.* from point where id_type_point=1;
 create or replace view v_category_point as 
 select point.* from point where id_type_point=2;
 
-drop view v_final_rank;
-drop view v_pre_final_rank;
-drop view v_rally_wins;
-drop view v_rally_general_ranked_points;
-drop view v_rally_category_ranked_points;
-drop view v_rally_general_ranked;
-drop view v_rally_category_ranked;
-drop view v_temps_rally;
 -- View pour recuperer le temps pour chaque rally
 -- Classement General sans les points
     create or replace view v_rally_general_ranked as
@@ -121,7 +114,7 @@ drop view v_temps_rally;
     select v_grp.id_pilote , count(distinct v_grp.id_rally) as wins
     from v_rally_general_ranked as v_grp
     where rang = 1
-    group by v_grp.id_pilote
+    group by v_grp.id_pilote;
 
 -- Classement avec le nombre de rally gagner
     create or replace view v_pre_final_rank as
